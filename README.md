@@ -9,3 +9,15 @@ hoopics-admin-restful-api的主要功能:
 ---
 * 相关框架: actix-web + Diesel ORM + JWT + Mariadb.  
 * 代码结构: 学习eggjs, 即router -> controller -> service -> model的结构.
+
+---
+.env 文件内容
+```
+HOOPICS_DATABASE_URL=主网站数据库地址
+HOOPICS_ADMIN_DATABASE_URL=admin数据库地址
+HOOPICS_STATISTICS_DATABASE_URL=统计数据库地址
+
+APP_HOST=服务器IP
+APP_PORT=端口
+HOOPICS_API_ROOT=http://IP:PORT/api/v2
+```
