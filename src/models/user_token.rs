@@ -41,8 +41,4 @@ impl UserToken {
             Err(_) => Err("api-token 已过期或者错误".to_string()) 
         }
     }
-
-    pub fn disable_token(token: &String) -> Result<String, String> {
-        Ok( "diable ok".to_string() )
-    }
 }

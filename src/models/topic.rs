@@ -9,8 +9,6 @@ pub struct Topic {
     pub url         : String,
     pub tag         : Option<String>,
     pub description : Option<String>,
-    // pub is_private  : i32,
-    // pub is_approved : i32,
 }
 
 #[derive(Queryable, QueryableByName, Insertable, Serialize, Deserialize, Debug)]

@@ -54,7 +54,7 @@ where
         self.service.poll_ready(cx)
     }
 
-    fn call(&mut self, mut req: ServiceRequest) -> Self::Future {
+    fn call(&mut self, req: ServiceRequest) -> Self::Future {
         let path = req.path();
         //check if path exists in whitelist
         match WHITELIST.get_key_value(path) {

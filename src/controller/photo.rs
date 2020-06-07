@@ -37,7 +37,6 @@ pub async fn get_all_photos(info: web::Path<(u32, u32)>) -> Result<HttpResponse>
 }
 
 // 审核图片
-// 管理员操作属性: is_approved / delete_by_admin
 pub async fn update_approve_status(info: web::Json<ModelPhoto::ApproveStatusJson>) -> Result<HttpResponse> { 
     match ServicePhoto::update_approve_status(info.photo_id, info.approve_status).await {
         Ok(general_res) => Ok(HttpResponse::Ok().json(general_res)),

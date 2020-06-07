@@ -13,7 +13,7 @@ use crate::constants::message::MESSAGE_LOGIN_FAILED;
 use crate::config::db::ADMINDBPOOL;
 pub use crate::schema::entry::Admin;
 use crate::schema::entry::admin::dsl::*;
-use crate::models::user_token::UserToken;
+// use crate::models::user_token::UserToken;
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct LoginRequest { 
@@ -63,7 +63,7 @@ pub struct LogoutRequest {
     pub token       : String,
     pub token_type  : String,
 }
-pub async fn logout(logout_req: LogoutRequest) -> Result<String, ServiceError> {
+pub async fn logout(_logout_req: LogoutRequest) -> Result<String, ServiceError> {
     // UserToken::disable_token(&logout_req.token);
     // Err(ServiceError::new(StatusCode::INTERNAL_SERVER_ERROR, MESSAGE_LOGIN_FAILED.to_string()))
 
